@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace FizzBuzzCodeKata
 {
-    class FizzBuzz
-    {
+    
+        class FizzBuzz
+        {
+            public bool isDevidableByThree(int number)
+            {
+                return false;
+            }
+            public bool isDevidableByFive(int number)
+            {
+                return false;
+            }
+            public string doFizzBuzz(int number)
+            {
+                return "";
+            }
+        }
     }
-}
+
+
+
