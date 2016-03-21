@@ -17,8 +17,8 @@ namespace FizzBuzzUnitTests
             Assert.AreEqual(false, BuzzThree.isDevidableByThree(4));
             Assert.AreEqual(false, BuzzThree.isDevidableByThree(5));
             Assert.AreEqual(true, BuzzThree.isDevidableByThree(6));
-
-        }
-       
+            Assert.AreEqual(true, BuzzThree.isDevidableByThree(0));
+            Assert.AreEqual(false, BuzzThree.isDevidableByThree(-1));
+        }       
     }
 }

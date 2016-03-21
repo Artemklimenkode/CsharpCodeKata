@@ -9,10 +9,10 @@ namespace FizzBuzzCodeKata
     
        public class FizzBuzz
         {
-            public bool isDevidableByThree(int number)
-            {
-            return false;
+            public bool isDevidableByThree(int number) {
+                return (number % 3 == 0);
             }
+
             public bool isDevidableByFive(int number)
             {
                 return false;
