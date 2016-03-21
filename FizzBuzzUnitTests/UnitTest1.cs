@@ -22,7 +22,8 @@ namespace FizzBuzzUnitTests
         }
 
         [TestMethod]
-        public void testIsDividableByFive() {
+        public void testIsDividableByFive()
+        {
             FizzBuzz testObject = new FizzBuzz();
 
             Assert.IsTrue(testObject.isDevidableByFive(0));
@@ -34,6 +35,15 @@ namespace FizzBuzzUnitTests
             Assert.IsFalse(testObject.isDevidableByFive(2));
             Assert.IsFalse(testObject.isDevidableByFive(3));
             Assert.IsFalse(testObject.isDevidableByFive(11));
+        }
+        [TestMethod]
+        public void testDoFizzBuzz()
+        {
+            FizzBuzz testBuzz = new FizzBuzz();
+            Assert.AreEqual("1" ,testBuzz.doFizzBuzz(1));
+            Assert.AreEqual("Fizz", testBuzz.doFizzBuzz(3));
+            Assert.AreEqual("Buzz", testBuzz.doFizzBuzz(5));
+            Assert.AreEqual("FizzBuzz", testBuzz.doFizzBuzz(15));
         }
     }
 }
