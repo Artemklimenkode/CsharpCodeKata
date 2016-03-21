@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3ACEA280-4E47-43CA-A535-939AECA6A1F1}</ProjectGuid>
+    <ProjectGuid>{BBD6B420-9F3F-4299-823D-13F4B6F46B9A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FizzBuzzUnitTests</RootNamespace>
