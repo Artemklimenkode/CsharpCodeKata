@@ -15,7 +15,13 @@ namespace FizzBuzzCodeKata
 
             public bool isDevidableByFive(int number)
             {
-                return false;
+
+            if (number % 5 == 0)
+            {
+                return true;
+
+            }
+            else return false;
             }
             public string doFizzBuzz(int number)
             {
