@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace FizzBuzzCodeKata
 {
     
-        class FizzBuzz
+       public class FizzBuzz
         {
             public bool isDevidableByThree(int number)
             {
-                return false;
+            return false;
             }
             public bool isDevidableByFive(int number)
             {
