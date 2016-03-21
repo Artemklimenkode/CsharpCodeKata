@@ -46,5 +46,11 @@ namespace FizzBuzzUnitTests
             Assert.AreEqual("Buzz", testBuzz.doFizzBuzz(5));
             Assert.AreEqual("FizzBuzz", testBuzz.doFizzBuzz(15));
         }
+
+        [TestMethod]
+        public void testPrintFizzBuzzInLoop() {
+            FizzBuzz testBuzz = new FizzBuzz();
+            testBuzz.printNumbersInLoop();
+        }
     }
 }
