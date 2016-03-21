@@ -36,6 +36,7 @@ namespace FizzBuzzUnitTests
             Assert.IsFalse(testObject.isDevidableByFive(3));
             Assert.IsFalse(testObject.isDevidableByFive(11));
         }
+
         [TestMethod]
         public void testDoFizzBuzz()
         {
