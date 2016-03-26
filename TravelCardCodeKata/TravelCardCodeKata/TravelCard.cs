@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TravelCardCodeKata
 {
-    
+
     public class TravelCard
     {
         double currentBalance;
@@ -22,15 +22,15 @@ namespace TravelCardCodeKata
                 return false;
             }
         }
-      public  void buySeasonalTicket(int forDays)
+        public void buySeasonalTicket(int forDays)
         {
 
         }
-      public  void buySeasonalTicketForAmount(Double withBalance)
+        public void buySeasonalTicketForAmount(Double withBalance)
         {
 
         }
-      public  DateTime getSeasonalExpireDate()
+        public DateTime getSeasonalExpireDate()
         {
             DateTime expiryDate = new DateTime();
             return expiryDate;
@@ -41,8 +41,7 @@ namespace TravelCardCodeKata
         }
         public Double getBalance()
         {
-            Double balance = new Double();
-            return balance;
+            return this.currentBalance;
         }
         public void setDiscount(double discountValue)
         {
