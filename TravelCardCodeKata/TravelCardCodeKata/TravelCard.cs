@@ -53,8 +53,20 @@ namespace TravelCardCodeKata
         }
 
         public void setDiscount(double discountValue)
+        {   if (discountValue > 100)
+            {
+                this.discount = 100;
+            }
+            else if (discountValue < 0)
+            {
+                this.discount = 0;
+            }
+
+            else { this.discount = discountValue; }
+        }
+        public double getDiscount()
         {
-            this.discount = discountValue;
+            return discount;
         }
 
         private double getTicketPrice() {

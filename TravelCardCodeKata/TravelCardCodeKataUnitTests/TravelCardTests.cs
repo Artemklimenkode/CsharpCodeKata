@@ -91,5 +91,18 @@ namespace TravelCardCodeKataUnitTests
             Assert.AreEqual(ticketPriceWithoutDiscount, ticketPriceWithZeroDiscount);
             Assert.AreNotEqual(ticketPriceWithZeroDiscount, 0);
         }
+        [TestMethod]
+        public void testDiscountWithMoreThanOneHundred()
+        {
+            testCard.setDiscount(200);
+            Assert.AreEqual(100, testCard.getDiscount());
+
+        }
+        [TestMethod]
+        public void testDiscountWithMLessThanAZero()
+        {
+            testCard.setDiscount(-200);
+            Assert.AreEqual(0, testCard.getDiscount());
+        }
     }
 }
