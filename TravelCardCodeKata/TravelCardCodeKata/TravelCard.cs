@@ -11,7 +11,9 @@ namespace TravelCardCodeKata
     {
         double currentBalance;
         double ticketPrice = 2;
-
+       double basicPrice = 2;
+        double discounted = 0;
+        bool discountSet = false;
         public bool buyTicket()
         {
             if (this.currentBalance >= ticketPrice)
@@ -47,7 +49,9 @@ namespace TravelCardCodeKata
         }
         public void setDiscount(double discountValue)
         {
-            this.ticketPrice = ticketPrice * (discountValue / 100);
+            
+            this.ticketPrice = basicPrice - basicPrice * (discountValue / 100);
+          
         }
 
     }
