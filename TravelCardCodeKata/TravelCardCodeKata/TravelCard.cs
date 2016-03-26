@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TravelCardCodeKata
 {
-    class TravelCard
+    public class TravelCard
     {
-        bool buyTicket()
+        public bool buyTicket()
         {
             return false;
         }
@@ -25,7 +25,7 @@ namespace TravelCardCodeKata
             DateTime expiryDate = new DateTime();
             return expiryDate;
         }
-        void extendBalance(double withAmount)
+        public void extendBalance(double withAmount)
         {
 
         }
