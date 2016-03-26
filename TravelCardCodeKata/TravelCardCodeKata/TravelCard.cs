@@ -10,15 +10,14 @@ namespace TravelCardCodeKata
     public class TravelCard
     {
         double currentBalance;
-        double ticketPrice = 2;
-       double basicPrice = 2;
-        double discounted = 0;
-        bool discountSet = false;
+        double basicPrice = 2;
+        double discount = 0; 
+
         public bool buyTicket()
         {
-            if (this.currentBalance >= ticketPrice)
+            if (this.currentBalance >= getTicketPrice())
             {
-                this.currentBalance = currentBalance - ticketPrice;
+                this.currentBalance = currentBalance - getTicketPrice();
                 return true;
             }
             else
@@ -26,33 +25,40 @@ namespace TravelCardCodeKata
                 return false;
             }
         }
+
         public void buySeasonalTicket(int forDays)
         {
 
         }
+
         public void buySeasonalTicketForAmount(Double withBalance)
         {
 
         }
+
         public DateTime getSeasonalExpireDate()
         {
             DateTime expiryDate = new DateTime();
             return expiryDate;
         }
+
         public void extendBalance(double withAmount)
         {
             this.currentBalance = withAmount;
         }
+
         public Double getBalance()
         {
             return this.currentBalance;
         }
+
         public void setDiscount(double discountValue)
         {
-            
-            this.ticketPrice = basicPrice - basicPrice * (discountValue / 100);
-          
+            this.discount = discountValue;
         }
 
+        private double getTicketPrice() {
+            return basicPrice * ((100 - this.discount) / 100);
+        } 
     }
 }
