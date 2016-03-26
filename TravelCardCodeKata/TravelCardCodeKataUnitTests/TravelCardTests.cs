@@ -67,11 +67,29 @@ namespace TravelCardCodeKataUnitTests
             double balanceAfterFirstTicket = this.testCard.getBalance();
             double ticketPriceWithoutDiscount = originalBalance - balanceAfterFirstTicket;
 
-            this.testCard.setDiscount(50);            
+            this.testCard.setDiscount(50);
             testCard.buyTicket();
             double ticketPriceWithDiscount = balanceAfterFirstTicket - this.testCard.getBalance();
 
             Assert.IsTrue(ticketPriceWithoutDiscount > ticketPriceWithDiscount);
+        }
+
+        [TestMethod]
+        public void testDiscountWithZero()
+        {
+            double originalBalance = 50;
+            testCard.extendBalance(originalBalance);
+
+            testCard.buyTicket();
+
+            double ticketPriceWithoutDiscount = originalBalance - this.testCard.getBalance();
+
+            testCard.setDiscount(0);
+            originalBalance = this.testCard.getBalance();
+            testCard.buyTicket();
+            double ticketPriceWithZeroDiscount = originalBalance - this.testCard.getBalance();
+            Assert.AreEqual(ticketPriceWithoutDiscount, ticketPriceWithZeroDiscount);
+            Assert.AreNotEqual(ticketPriceWithZeroDiscount, 0);
         }
     }
 }
