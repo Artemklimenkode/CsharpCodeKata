@@ -25,11 +25,26 @@ namespace TravelCardCodeKata
                 return false;
             }
         }
-
+        
+        /// <summary>
+        /// Purchases tickets for the given number of days.
+        /// </summary>
+        /// <param name="forDays">Defines the number of days for which the seasonal ticket should be purchased for</param>
         public void buySeasonalTicket(int forDays)
         {
+            if (forDays > 0)
+            {
+                if (isSeasonalTicketValid())
+                {
+                    this.expiryDate.AddDays(forDays);
+                }
+                else
+                {
+                    this.expiryDate = this.getCurrentDate().AddDays(forDays);
+                }
+            }
         }
-
+        
         public void buySeasonalTicketForAmount(Double withBalance)
         {
 
