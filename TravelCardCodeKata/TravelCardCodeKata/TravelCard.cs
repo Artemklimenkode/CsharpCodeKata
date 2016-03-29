@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TravelCardCodeKata
 {
-
     public class TravelCard
     {
         double currentBalance;
         double basicPrice = 2;
-        double discount = 0; 
+        double discount = 0;
+        DateTime expiryDate;
 
         public bool buyTicket()
         {
@@ -36,9 +36,8 @@ namespace TravelCardCodeKata
 
         }
 
-        public DateTime getSeasonalExpireDate()
+        public DateTime getSeasonalExpiryDate()
         {
-            DateTime expiryDate = new DateTime();
             return expiryDate;
         }
 
