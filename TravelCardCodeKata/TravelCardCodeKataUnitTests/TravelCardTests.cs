@@ -91,6 +91,7 @@ namespace TravelCardCodeKataUnitTests
             Assert.AreEqual(ticketPriceWithoutDiscount, ticketPriceWithZeroDiscount);
             Assert.AreNotEqual(ticketPriceWithZeroDiscount, 0);
         }
+
         [TestMethod]
         public void testDiscountWithMoreThanOneHundred()
         {
@@ -98,12 +99,14 @@ namespace TravelCardCodeKataUnitTests
             Assert.AreEqual(100, testCard.getDiscount());
 
         }
+
         [TestMethod]
         public void testDiscountWithMLessThanAZero()
         {
             testCard.setDiscount(-200);
             Assert.AreEqual(0, testCard.getDiscount());
         }
+
         [TestMethod]
         public void testSeasonalTicketForDays()
         {
@@ -113,5 +116,24 @@ namespace TravelCardCodeKataUnitTests
             Assert.AreEqual(true, this.testCard.isSeasonalTicketValid());
         }
 
+        [TestMethod]
+        public void testSeasonalTicketForAmountWithChange()
+        {
+            Assert.AreEqual(false, this.testCard.isSeasonalTicketValid());
+            double change = testCard.buySeasonalTicketForAmount(100.50);
+
+            Assert.AreEqual(true, this.testCard.isSeasonalTicketValid());
+            Assert.AreEqual(0.50, change, 0.05);
+        }
+
+        [TestMethod]
+        public void testSeasonalTicketForAmountWithoutChange()
+        {
+            Assert.AreEqual(false, this.testCard.isSeasonalTicketValid());
+            double change = testCard.buySeasonalTicketForAmount(100);
+
+            Assert.AreEqual(true, this.testCard.isSeasonalTicketValid());
+            Assert.AreEqual(0, change, 0.05);
+        }
     }
 }
