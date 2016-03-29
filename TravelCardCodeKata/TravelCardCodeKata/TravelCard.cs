@@ -28,7 +28,6 @@ namespace TravelCardCodeKata
 
         public void buySeasonalTicket(int forDays)
         {
-
         }
 
         public void buySeasonalTicketForAmount(Double withBalance)
@@ -68,8 +67,16 @@ namespace TravelCardCodeKata
             return discount;
         }
 
+        public bool isSeasonalTicketValid() {
+            return this.getCurrentDate() <= this.expiryDate;
+        }
+
         private double getTicketPrice() {
             return basicPrice * ((100 - this.discount) / 100);
-        } 
+        }
+
+        private DateTime getCurrentDate() {
+            return DateTime.Now;
+        }
     }
 }
