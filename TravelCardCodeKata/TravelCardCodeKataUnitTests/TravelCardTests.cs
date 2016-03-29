@@ -104,5 +104,14 @@ namespace TravelCardCodeKataUnitTests
             testCard.setDiscount(-200);
             Assert.AreEqual(0, testCard.getDiscount());
         }
+        [TestMethod]
+        public void testSeasonalTicketForDays()
+        {
+            Assert.AreEqual(false, this.testCard.isSeasonalTicketValid());
+            testCard.buySeasonalTicket(5);
+
+            Assert.AreEqual(true, this.testCard.isSeasonalTicketValid());
+        }
+
     }
 }
