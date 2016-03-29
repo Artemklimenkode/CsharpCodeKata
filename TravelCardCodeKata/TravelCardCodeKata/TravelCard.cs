@@ -45,9 +45,9 @@ namespace TravelCardCodeKata
             }
         }
         
-        public void buySeasonalTicketForAmount(Double withBalance)
+        public double buySeasonalTicketForAmount(Double withBalance)
         {
-
+            return 0;
         }
 
         public DateTime getSeasonalExpiryDate()
