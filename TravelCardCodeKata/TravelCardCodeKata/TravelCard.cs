@@ -47,6 +47,34 @@ namespace TravelCardCodeKata
         
         public double buySeasonalTicketForAmount(Double withBalance)
         {
+            if (withBalance > 0)
+            {
+                int amountOfDays = convertBalanceToDays(withBalance);
+                this.buySeasonalTicket(amountOfDays);
+                
+                return this.getChangeFromAmount(withBalance);
+            }
+            return 0;
+        }
+        
+        private int convertBalanceToDays(Double balance)
+        {
+            if (balance > 0)
+            {
+                int amountOfDays = (int)(balance / getTicketPrice());
+                return amountOfDays;
+            }
+            return 0;
+
+        }
+        private double getChangeFromAmount(Double amount)
+        {
+            if (amount > 0)
+            {
+                double change = amount % getTicketPrice();
+                return change;
+            }
+
             return 0;
         }
 
